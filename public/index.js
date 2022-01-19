@@ -10,6 +10,9 @@ btn.addEventListener('click', async (e) => {
         const inputTxt = document.querySelector('.input');
         const name = inputTxt.value;
         inputTxt.value = '';
+        if (name === '') {
+            return alert('please pass the name.')
+        }
 
         const data = await fetch('http://localhost:5000/info', {
             method: 'POST',
