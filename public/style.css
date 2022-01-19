@@ -27,7 +27,7 @@
 }
 
 
-.btn{
+.btn,.getbtn{
     margin-left: 20px;
     padding: 10px 20px;
     cursor: pointer;
@@ -36,6 +36,12 @@
     color: white;
     border-radius: 5px;
     font-size: 25px;
+}
+
+.getbtn{
+    margin-left: 0;
+    margin-top: 15px;
+    text-decoration: none;
 }
 
 .container h1{

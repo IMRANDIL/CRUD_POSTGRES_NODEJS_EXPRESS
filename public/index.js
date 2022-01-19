@@ -1,6 +1,7 @@
 
 
 const btn = document.querySelector('.btn');
+const getbtn = document.querySelector('.getbtn');
 
 
 
@@ -28,4 +29,15 @@ btn.addEventListener('click', async (e) => {
         console.log(error);
     }
 
+});
+
+
+
+
+//show data...
+
+getbtn.addEventListener('click', async () => {
+    const response = await fetch('http://localhost:5000/info/get');
+    const data = await response.json();
+    console.log(data);
 })

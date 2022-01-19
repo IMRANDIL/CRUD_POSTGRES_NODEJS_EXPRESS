@@ -16,6 +16,21 @@ router.post('/info', async (req, res) => {
         console.log(error);
     }
 
+});
+
+
+//show data...
+
+router.get('/info/get', async (req, res) => {
+    try {
+        const query = `SELECT * FROM test_postgres;`;
+        pool.query(query, (err, result) => {
+            if (err) throw err;
+            res.status(200).json(result.rows);
+        })
+    } catch (error) {
+        console.log(error);
+    }
 })
 
 
