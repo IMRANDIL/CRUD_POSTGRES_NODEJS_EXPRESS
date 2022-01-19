@@ -3,7 +3,8 @@ require('dotenv').config();
 const path = require('path');
 const app = express();
 const postgresRouter = require('./router/PostgresRouter');
-
+const cors = require('cors');
+app.use(cors());
 //middlewares...
 app.use(express.static(path.join(__dirname, '/public')));
 

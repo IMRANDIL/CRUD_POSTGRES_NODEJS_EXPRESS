@@ -21,7 +21,7 @@ btn.addEventListener('click', async (e) => {
             },
             body: JSON.stringify({ name: name })
         });
-        const response = await data.json();
+        return await data.json();
 
 
     } catch (error) {
